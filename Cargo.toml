@@ -1,0 +1,15 @@
+[package]
+name = "proc_gen"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bevy = { version = "0.14.2", features = ["dynamic_linking"] }
+nalgebra = "0.33.2"
+rapier3d = {version = "*", features = ["simd-stable"] }
+
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3
